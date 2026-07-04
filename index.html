@@ -16,6 +16,14 @@
 <meta name="twitter:title" content="$ANSEMnomics — The Black Bull Blueprint"/>
 <meta name="twitter:description" content="A free, independent field manual on the habits behind Ansem (@blknoiz06). Honest about the risk. Not financial advice."/>
 <meta name="twitter:image" content="https://ikforson.github.io/ANSEMnomics/og-image.jpg"/>
+<!-- Google Analytics 4 (free). Replace G-KCNE2TJ919 with your Measurement ID. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCNE2TJ919"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KCNE2TJ919');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -399,6 +407,15 @@ function copyAddr(){
     navigator.clipboard.writeText(a).then(ok).catch(bad);
   } else { bad(); }
 }
+
+// Count book (PDF) downloads as a GA4 event
+document.querySelectorAll('a[href$="book.pdf"]').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (typeof gtag === 'function') {
+      gtag('event', 'book_download', { event_category: 'engagement', event_label: 'ANSEMnomics PDF' });
+    }
+  });
+});
 </script>
 </body>
 </html>
