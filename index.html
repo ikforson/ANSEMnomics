@@ -171,6 +171,17 @@ footer .frow{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;
   font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);}
 footer .frow a:hover{color:var(--gold);}
 
+.supgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px;}
+.supcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+.suphead{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.qrbox{background:#fff;padding:12px;border-radius:12px;line-height:0;margin-bottom:16px;}
+.qrbox img{width:168px;height:168px;display:block;}
+.addr{font-family:'JetBrains Mono',monospace;font-size:12px;color:#dfe3ee;background:#0a0f1e;border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;margin-bottom:14px;max-width:330px;}
+.copymsg{display:block;margin-top:10px;font-size:12.5px;color:var(--up);min-height:16px;font-family:'JetBrains Mono',monospace;}
+.supp-note{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:32ch;}
+.support .supcard .btn{margin-top:auto;cursor:pointer;}
+@media(max-width:720px){.supgrid{grid-template-columns:1fr;}}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
@@ -302,6 +313,28 @@ footer .frow a:hover{color:var(--gold);}
   </div>
 </section>
 
+<section id="support" class="divide support">
+  <div class="wrap reveal">
+    <p class="sec-label">05 / Support the work</p>
+    <h2 class="sec-title">The book is free. Support is optional.</h2>
+    <p class="sec-intro">If $ANSEMnomics helped you, you can chip in to support independent writing from Accra. Entirely voluntary &mdash; no coin, no tokens, nothing owed in return.</p>
+    <div class="supgrid">
+      <div class="supcard">
+        <div class="suphead">Solana &middot; SOL</div>
+        <div class="qrbox"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAHvElEQVR4nO3dMW5kuRlGUctQ5mAWMPtfmhfgwPFz2hHR7f8S5Cudkw6kelXVumDwgfP1PM8/ADr/PP0AwKeRFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQOx78sP/+uvv6jku8d///HvxX9fvd/2za5NPcvK6dzr1OZ/6Bu80+TScVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2Ghlu3bn+nPfnnXfgnPt1DuaWL/uvqc69Q1+3t/CmtMKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChDbuLJdO7XgnLjzvtLJcvTU3a6T173z/U688W9hzWkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYgdW9m+0b595+R1J+682/XOLSy/z2kFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYhZ2WYmy9FTJk916mf3se6tOK0AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALFjK9s3bhb3bUMnn8a+beip93vq3t9T2983/i2sOa0AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALGNK9s77yvdZ99ydLKj3bfBvfPu3jvvo/1pfwtOK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitA7Ot5ntPP8CHu3HeecurT8C3cwGkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYiNVrZ33rG6NrlVdN/trXfesbrvG/y8b3/yuqd+876ncloBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWLf+371ncvCye7wjRvNyTP/tA3u2p1PNbHvmZ1WgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYxpXtxKld6Z3rz33v99Trnvp+137aftddtsBryAoQkxUgJitATFaAmKwAMVkBYrICxGQFiI1WtvvuZ93n1IJz7dTtvBN33mX7xsXq5AblO/89O60AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALGv53k2/epTC7+JO1eYk9/Mr059v2t37qQnnFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNhoZXvncvSnve7EnXfK/rTd8J2fxuTfs9MKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChD7nvzwvl3pZHd450bz8xarb1x/nvokJ8985wZ3zWkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYiNVrYT+/5v9ft+8xt3pWvu7v3VGz+NffvsCacVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSD29TzP//3D+7aSb1xwrp3ad+7bWZ76zWt3LpLX9j3z2r5v0GkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYhtXNneuXd84373zsXqnWvmtTvf0Z1b5wmnFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUg9n3qhU8tGierxDt3w2un7tBdu3OffeetwGt3fgtOK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbHSX7cS+vePaqdtMP+8O3TcuZU+587Nas7IFLiIrQExWgJisADFZAWKyAsRkBYjJChCTFSA2usv21IZv4s694+QO3VN75Td64z77jZxWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYaGV7ail7anU6eb+n7rK98x19nn0b3Dfe3eu0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEjt1lO/F5N7/u20reuUjetxzd9x2deuY33qHrtALEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxL6e5zn9DH/sjRvNO+8c3efOG1hPfb93LpL3cVoBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKjle0bN6k/baE7eao3LkfvvNt14s4d7ZrTChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQ+5788Bv3f/sWnG9cBk983rd/5/f7Rk4rQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BstLL9vHXgG29R3Xen7J3f7xuf6s4F9r5ndloBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKjle3anXedTjaab9xK3rn+nPzsnbvhO/9tnOK0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLENq5s1964d5x441by1Hd05w27d96hu3bqmZ1WgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYsZUtv+/OfedkKfvG112b7KT33d176rNyWgFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYla2f2CySty3d7xzdXqnfVvYO7nLFvgQsgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYsdWtpO94ylvXMreucG9c7G676lO3VZ7itMKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChDbuLK9c0k5MXlHp7aS+/ada6dujd33Sb7xOzq133VaAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFiX8/znH4G4KM4rQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsT+B3z4z7jDgI1FAAAAAElFTkSuQmCC" alt="Scan to donate Solana"/></div>
+        <div class="addr" id="soladdr">59J1aehQ9oaYmYnX3o9eT7PUCh33uzrCKMuyTknxGfmq</div>
+        <button class="btn btn--ghost" onclick="copyAddr()">Copy address</button>
+        <span id="copymsg" class="copymsg" role="status" aria-live="polite"></span>
+      </div>
+      <div class="supcard">
+        <div class="suphead">PayPal &middot; Card</div>
+        <p class="supp-note">Prefer not to use crypto? Support in your local currency with any card via PayPal.</p>
+        <a class="btn btn--gold" href="https://paypal.me/ForsonOnlineAgency?locale.x=en_US&country.x=LS" target="_blank" rel="noopener">Support via PayPal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="author" class="divide">
   <div class="wrap reveal">
     <div class="author">
@@ -313,7 +346,7 @@ footer .frow a:hover{color:var(--gold);}
           <a href="https://x.com/isaacforson" target="_blank" rel="noopener">@isaacforson &#8599;</a>
           <a href="#get">Join the list</a>
           <!-- Optional: point this at your Ko-fi/PayPal to accept support -->
-          <a href="#" target="_blank" rel="noopener">Support the work &#8599;</a>
+          <a href="#support">Support the work &#8599;</a>
         </div>
       </div>
     </div>
@@ -356,6 +389,15 @@ document.getElementById('joinform').addEventListener('submit', function(e){
   msg.textContent = 'You\u2019re on the list. Charge forward. \u2014 connect your email provider to store this.';
   this.reset();
 });
+function copyAddr(){
+  var a = document.getElementById('soladdr').textContent.trim();
+  var m = document.getElementById('copymsg');
+  function ok(){ m.textContent = 'Copied to clipboard. Thank you.'; }
+  function bad(){ m.textContent = 'Press and hold the address to copy.'; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(a).then(ok).catch(bad);
+  } else { bad(); }
+}
 </script>
 </body>
 </html>
